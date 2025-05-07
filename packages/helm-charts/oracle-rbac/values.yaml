@@ -1,6 +1,0 @@
-environment:
-  name: default
-  currencyPair: PLQUSD
-
-oracle:
-  replicas: 1

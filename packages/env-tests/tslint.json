@@ -1,4 +1,0 @@
-{
-  "extends": ["@planq-network/typescript/tslint.json"],
-  "rules": {}
-}

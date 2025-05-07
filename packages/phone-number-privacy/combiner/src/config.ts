@@ -160,7 +160,7 @@ if (DEV_MODE) {
     config = {
       serviceName: defaultServiceName,
       blockchain: {
-        provider: process.env.BLOCKCHAIN_PROVIDER,
+        provider: process.env.BLOCKCHAIN_PROVIDER!,
         apiKey: process.env.BLOCKCHAIN_PROVIDER_API_KEY,
       },
       phoneNumberPrivacy: {

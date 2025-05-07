@@ -60,10 +60,6 @@ yargs
 
       let blockchainProvider: string;
       switch (contextName) {
-        case "atlasstaging":
-        case "atlas":
-          blockchainProvider = "https://evm-atlas.planq.network";
-          break;
         case "mainnet":
           blockchainProvider = "https://forno.celo.org";
           break;

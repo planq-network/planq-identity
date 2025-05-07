@@ -22,9 +22,7 @@
     "check-licenses": "yarn licenses list --prod | grep '\\(─ GPL\\|─ (GPL-[1-9]\\.[0-9]\\+ OR GPL-[1-9]\\.[0-9]\\+)\\)' && echo 'Found GPL license(s). Use 'yarn licenses list --prod' to look up the offending package' || echo 'No GPL licenses found'",
     "report-coverage": "yarn run lerna run test-coverage",
     "test:watch": "node node_modules/jest/bin/jest.js --watch",
-    "postinstall": "yarn run lerna run postinstall && patch-package && yarn keys:decrypt",
-    "keys:decrypt": "bash scripts/key_placer.sh decrypt",
-    "keys:encrypt": "bash scripts/key_placer.sh encrypt",
+    "postinstall": "yarn run lerna run postinstall && patch-package",
     "check:packages": "node ./scripts/check-packages.js",
     "planqtool": "yarn --cwd packages/planqtool run --silent cli",
     "planqcli": "yarn --cwd packages/cli run --silent planqcli",
@@ -40,10 +38,7 @@
   },
   "workspaces": {
     "packages": [
-      "packages/*",
-      "packages/phone-number-privacy/*",
-      "packages/sdk/*",
-      "packages/sdk/wallets/*"
+      "packages/phone-number-privacy/*"
     ],
     "nohoist": [
       "**/openzeppelin-solidity",
