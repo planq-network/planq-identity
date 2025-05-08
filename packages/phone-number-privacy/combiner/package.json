@@ -6,6 +6,7 @@
   "license": "Apache-2.0",
   "main": "dist/index.js",
   "scripts": {
+    "start": "yarn build && node -r dotenv/config dist/index.js",
     "dev": "yarn build && firebase serve --only functions",
     "deploy": "yarn build && firebase deploy --only functions:combiner",
     "deploy:staging": "yarn deploy --project planq-phone-number-privacy-stg",
